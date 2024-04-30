@@ -1,9 +1,9 @@
 <?php
 // DELETE operation
 
-require_once "conn.php";
+require_once "create_connection.php"; #cl
 $id = $_GET["id"];
-$query = "DELETE FROM results WHERE id = '$id'"; // Note this will need to be edited for our DB
+$query = "DELETE FROM CUSTOMER WHERE customer_id = '$id'"; // Note this will need to be edited for our DB, cl
 if (mysqli_query($conn, $query)) {
     header("location: index.php");
 } else {
