@@ -4,6 +4,7 @@ CREATE DATABASE coffee_shop;
 
 USE coffee_shop;
 
+
 CREATE TABLE CUSTOMER (
     customer_id INT PRIMARY KEY,
     phone_num VARCHAR(15),
@@ -11,10 +12,14 @@ CREATE TABLE CUSTOMER (
     customer_addr VARCHAR(255)
 );
 
+
 CREATE TABLE EMPLOYEE (
     employee_id INT PRIMARY KEY,
-    employee_name VARCHAR(100)
+    employee_name VARCHAR(100),
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES CUSTOMER(customer_id)
 );
+
 
 CREATE TABLE ROLES (
     employee_id INT,
@@ -24,6 +29,7 @@ CREATE TABLE ROLES (
     cleaner BOOLEAN,
     barista BOOLEAN
 );
+
 
 CREATE TABLE ORDERS (
     order_num INT PRIMARY KEY,
@@ -45,8 +51,11 @@ CREATE TABLE DISTRIBUTOR (
 CREATE TABLE PRODUCT (
     product_id INT PRIMARY KEY,
     product_name VARCHAR(100),
+    customer_id INT,
     descriptions TEXT,
     size VARCHAR(20),
     price DECIMAL(8, 2),
+    FOREIGN KEY (customer_id) REFERENCES CUSTOMER(customer_id),
     FOREIGN KEY (product_name) REFERENCES DISTRIBUTOR(product_name)
 );
+
