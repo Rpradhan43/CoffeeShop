@@ -1,30 +1,134 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
 }
 
-header {
-    background: #333;
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+}
+
+.nav-link {
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background: white;
+.nav-link:hover {
+    background-color: #5f2c1c;
 }
 
-footer {
-    background: #333;
+/* Table Styles */
+.table-dark {
+    background-color: #343a40;
     color: white;
-    text-align: center;
-    padding: 10px 20px;
+}
+
+.btn-primary, .btn-danger {
+    background-color: #875247;
+    border: none;
+}
+
+.btn-primary:hover, .btn-danger:hover {
+    background-color: #5f2c1c;
+}
+
+/* Footer Styles */
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #f1f1f1;
+    color: #343a40;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Order Section Styles */
+.order-section {
+    margin: 50px 0;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.active {
+    display: block;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover, .active {
+    background-color: #d1d1d1;
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px;
+    }
 }
