@@ -58,6 +58,11 @@ session_start()
                 ?>
             </tbody>
         </table>
+        
+        <form method="post" action="choose_barista.php">
+            <input type="submit" value="Finish Order">
+        </form>
+    </div>
     </div>
 
     <footer class="footer">
