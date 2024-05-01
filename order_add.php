@@ -16,16 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["order"][] = $selected_drink;
         
         // Redirect back to the order page
-        header("Location: order.php");
+        header("Location: orders.php");
         exit;
     } else {
         // If no drink is selected, redirect back to the order page
-        header("Location: order.php");
+        header("Location: orders.php");
         exit;
     }
 } else {
     // If form is not submitted, redirect back to the order page
-    header("Location: order.php");
+    header("Location: orders.php");
     exit;
 }
 ?>

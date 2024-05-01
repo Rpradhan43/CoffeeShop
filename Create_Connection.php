@@ -1,16 +1,20 @@
 <?php
 
-$servername = 'LocalHost80';
-$username = 'root';
-$password = '2357';
+// MySQL database configuration
+$host = "localhost";
+$username = "root";
+$password = "Carlos3822"; 
+$database = "coffee_shop"; // Change this to the name of your MySQL database
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+// Create a connection to the MySQL database
+$connection = new mysqli($host, $username, $password, $database);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  echo "Connected successfully";
+// Check if the connection was successful
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+}
+
+echo "Connected successfully";
+
 
 ?>

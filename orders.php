@@ -1,6 +1,6 @@
 <?php
 // Start session (if not already started)
-session_start();
+include 'create_connection.php';
 ?>
 
 <!DOCTYPE html>
