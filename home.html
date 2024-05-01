@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="orders.html">Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="orders.php">Orders</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,20 +36,20 @@
         </div>
 
         <div class="mySlides">
-            <div la="numbertext">3 / 3</div>
+            <div class="numbertext">3 / 3</div>
             <img src="image_3.jpg" style="width:100%">
-            <div la="text">Discover our world-class coffee, freshly brewed to kickstart your day!</div>
+            <div class="text">Discover our world-class coffee, freshly brewed to kickstart your day!</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a la="next" onclick="plusSlides(1)">❯</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
 
     <br>
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
-        <span la="dot" onclick="currentSlide(2)"></span>
-        <span la="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
     <footer class="footer">
@@ -62,16 +62,27 @@
 
         function showSlides() {
             let i;
-            let slides = ipes("mySlides");
-            let dots = ips("dot");
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
             setTimeout(showSlides, 3000);
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
         }
     </script>
 
