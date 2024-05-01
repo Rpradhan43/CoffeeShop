@@ -35,6 +35,13 @@ session_start()
             <input type="radio" name="drink" value="iced vanilla latte"> Iced Vanilla Latte<br>
             <input type="radio" name="drink" value="iced white chocolate mocha"> Iced White Chocolate Mocha<br>
             <input type="radio" name="drink" value="raspberry cappuccino"> Raspberry Cappuccino<br>
+            <input type="radio" name="drink" value="custom"> Custom Drink<br>
+            <?php if ($_POST['drink'] === 'custom'): ?>
+            <div>
+                <label for="customDrink">Enter Custom Drink:</label>
+                <input type="text" name="customDrink" id="customDrink">
+            </div>
+            <?php endif; ?>
             <input type="submit" value="Place Order">
         </form>
         
@@ -43,6 +50,7 @@ session_start()
             <thead>
                 <tr>
                     <th>Drink</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,15 +58,23 @@ session_start()
                 // Display current order details
                 if (isset($_SESSION["order"]) && !empty($_SESSION["order"])) {
                     foreach ($_SESSION["order"] as $drink) {
-                        echo "<tr><td>$drink</td></tr>";
+                        echo "<tr>";
+                        echo "<td>$drink</td>";
+                        echo "<td>
+                                <form method='post' action='delete.php'>
+                                    <input type='hidden' name='drink' value='$drink'>
+                                    <input type='submit' name='deletebtn' value='Delete' class='btn btn-danger'>
+                                </form>
+                              </td>";
+                        echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='1'>No drinks in the current order</td></tr>";
+                    echo "<tr><td colspan='2'>No drinks in the current order</td></tr>";
                 }
                 ?>
             </tbody>
         </table>
-        
+
         <form method="post" action="choose_barista.php">
             <input type="submit" value="Finish Order">
         </form>
