@@ -1,9 +1,11 @@
 <?php
 // Include the database connection file
 include 'create_connection.php';
-echo "form submitted"
 
 // Start session (if not already started)
+session_start();
+
+echo "form submitted"; // Add semicolon here
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
