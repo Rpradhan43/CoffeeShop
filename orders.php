@@ -29,7 +29,7 @@ include 'create_connection.php';
 
     <div id="main-content">
         <h2>Choose Your Drink</h2>
-        <form method="post" action="process_order.php">
+        <form method="post" action="order_add.php">
             <input type="radio" name="drink" value="caramel macchiato"> Caramel Macchiato<br>
             <input type="radio" name="drink" value="iced vanilla latte"> Iced Vanilla Latte<br>
             <input type="radio" name="drink" value="iced white chocolate mocha"> Iced White Chocolate Mocha<br>
