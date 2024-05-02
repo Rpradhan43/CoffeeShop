@@ -35,11 +35,10 @@ session_start()
         <input type="radio" name="drink" value="iced vanilla latte"> Iced Vanilla Latte<br>
         <input type="radio" name="drink" value="iced white chocolate mocha"> Iced White Chocolate Mocha<br>
         <input type="radio" name="drink" value="raspberry cappuccino"> Raspberry Cappuccino<br>
-        <input type="radio" name="drink" value="custom"> Custom Drink<br>
-        <div id="customDrinkInput" style="display: none;">
-            <label for="customDrink">Enter Custom Drink:</label>
-            <input type="text" name="customDrink" id="customDrink">
-        </div>
+        <<form method="post" action="order_custom_drink.php">
+            <input type="text" name="custom_drink" placeholder="Enter custom drink">
+            <input type="submit" value="Add Custom Drink">
+        </form>
         <input type="submit" value="Place Order">
     </form>
 
