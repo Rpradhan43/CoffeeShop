@@ -14,7 +14,7 @@ if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 } else {
     // If the connection was successful, display a success message
-    echo "Connected successfully";
+    echo "Connected successfully<br>";
 }
 
 ?>

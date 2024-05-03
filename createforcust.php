@@ -2,18 +2,11 @@
 include "create_connection.php";
 
 if (isset($_POST['submit'])) {
-    // Dump form data for debugging
-    var_dump($_POST);
-    
     // Retrieve form data
     $customer_name = $_POST['customer_name'];
     $customer_addr = $_POST['customer_addr'];
     $phone_num = $_POST['phone_num'];
 
-    // Perform additional validation if needed
-
-    // Proceed with database insertion
-    // Corrected SQL statement using backticks for table name
     $sql = "INSERT INTO `CUSTOMER` (`customer_name`, `customer_addr`, `phone_num`) VALUES ('$customer_name','$customer_addr','$phone_num')";
 
     $result = $connection->query($sql);
