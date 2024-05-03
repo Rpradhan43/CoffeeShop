@@ -17,6 +17,4 @@ if ($connection->connect_error) {
     echo "Connected successfully";
 }
 
-$connection->close();
-
 ?>
