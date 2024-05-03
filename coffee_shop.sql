@@ -12,6 +12,8 @@ CREATE TABLE CUSTOMER (
     customer_addr VARCHAR(255)
 );
 
+ALTER TABLE employee DROP FOREIGN KEY employee_ibfk_1;
+
 
 CREATE TABLE EMPLOYEE (
     employee_id INT PRIMARY KEY,
