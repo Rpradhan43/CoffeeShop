@@ -3,7 +3,7 @@
 // MySQL database configuration
 $host = "localhost";
 $username = "root";
-$password = "Carlos3822"; 
+$password = ""; 
 $database = "coffee_shop";
 
 $connection = new mysqli($host, $username, $password, $database);

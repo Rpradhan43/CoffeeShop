@@ -2,7 +2,6 @@
 include "create_connection.php";
 
 if (isset($_POST['updateforcust'])) {
-    // Validate form data
     $customer_id = $_POST['customer_id'];
     $customer_name = $_POST['customer_name'];
     $customer_addr = $_POST['customer_addr'];
@@ -19,11 +18,10 @@ if (isset($_POST['updateforcust'])) {
         echo "Error updating record: " . $stmt->error;
     }
 
-    // Close prepared statement
     $stmt->close();
 }
 
-// Display the update form
+// Display
 if (isset($_GET['customer_id'])) {
     $customer_id = $_GET['customer_id']; 
 

@@ -18,7 +18,6 @@ if (isset($_POST['submit'])) {
         echo "Error: " . $sql . "<br>" . $connection->error;
     } 
 
-    // Close database connection
     $connection->close(); 
 }
 ?>

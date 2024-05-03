@@ -1,5 +1,4 @@
 <?php
-// Start session (if not already started)
 include 'create_connection.php';
 session_start();
 ?>
@@ -37,7 +36,6 @@ session_start();
         <input type="submit" value="Place Order">
     </form>
 
-    <!-- Current Orders -->
     <h2>Current Order</h2>
     <table class="table table-dark">
         <thead>
