@@ -68,7 +68,7 @@ session_start();
         </tbody>
     </table>
 
-    <form method="post" action="customer.php">
+    <form method="post" action="createforcust.php">
         <input type="submit" value="Proceed" class="btn btn-success mt-3">
     </form>
 

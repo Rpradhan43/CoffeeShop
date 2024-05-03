@@ -6,7 +6,7 @@ USE coffee_shop;
 
 
 CREATE TABLE CUSTOMER (
-    customer_id INT PRIMARY KEY,
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
     phone_num VARCHAR(15),
     customer_name VARCHAR(100),
     customer_addr VARCHAR(255)

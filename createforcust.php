@@ -10,7 +10,7 @@ include "create_connection.php";
 
     $phone_num = $_POST['phone_num'];
 
-    $sql = "INSERT INTO CUSTOMER(`customer_name`, `customer_addr`, `phone_num`) VALUES ('$customer_name','$customer_addr','$phone_num')";
+    $sql = "INSERT INTO 'CUSTOMER' (`customer_name`, `customer_addr`, `phone_num`) VALUES ('$customer_name','$customer_addr','$phone_num')";
 
     $result = $conn->query($sql);
 
@@ -24,7 +24,7 @@ include "create_connection.php";
 
     } 
 
-    $conn->close(); 
+    $connection->close(); 
 
   }
 
@@ -59,9 +59,7 @@ include "create_connection.php";
     Phone:<br>
 
     <input type="number" name="phone_num">
-
-    <br>
-
+    <br><br>
     <input type="submit" name="submit" value="submit">
 
   </fieldset>
