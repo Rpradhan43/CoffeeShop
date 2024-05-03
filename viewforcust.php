@@ -15,7 +15,7 @@ $result = $connection->query($sql);
     <div class="container">
         <h2>Customer Information</h2>
     <table class="table">
-        <head>
+        <thead>
             <tr>
             <tr>
             <th>Name</th>

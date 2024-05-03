@@ -2,9 +2,9 @@
 include "create_connection.php";
 
 // Check if customer_id is set in the URL
-if (isset($_GET['id'])) {
+if (isset($_GET['customer_id'])) {
     // Retrieve the customer_id from the URL parameter
-    $customer_id = $_GET['id'];
+    $customer_id = $_GET['customer_id'];
     // SQL query to delete the customer record
     $sql = "DELETE FROM CUSTOMER WHERE customer_id='$customer_id'";
 
